@@ -24,42 +24,32 @@ public class TaskQuestionAnswersApplication {
 
         return args -> {
 
-//            List<QuestionEntity> questionEntities = new ArrayList<>();
-//            List<String> answersForQ1 = new ArrayList<>();
-//            String answer1 = "15";
-//            String answer2 = "16";
-//            String answer3 = "17";
-//            String answer4 = "18";
-//            answersForQ1.add(answer1);
-//            answersForQ1.add(answer2);
-//            answersForQ1.add(answer3);
-//            answersForQ1.add(answer4);
-//
-//            QuestionEntity questionEntity1 = QuestionEntity.builder()
-//                    .question("12 + 4")
-//                    .answers(answersForQ1)
-//                    .rightAnswer(answer2)
-//                    .build();
-//            questionRepository.save(questionEntity1);
-//
-//
-//            questionEntities.add(questionEntity1);
-//            questionRepository.saveAll(questionEntities);
+            List<QuestionEntity> questionEntities = new ArrayList<>();
 
-            Faker faker = new Faker();
+            QuestionEntity questionEntity1 = QuestionEntity.builder()
+                    .question("What is the fastest animal ?\n 1. Turtle \n2. Giraffe \n3. Cheetah \n4. None of the above")
+                    .rightAnswer(3)
+                    .build();
+            questionRepository.save(questionEntity1);
 
-            for (int i = 0; i < 10; i++) {
-                QuestionEntity entity = new QuestionEntity();
-                entity.setQuestion("What is " + faker.gameOfThrones().quote() + " mean?");
-                List<String> answers = new ArrayList<>();
-                answers.add(faker.gameOfThrones().city());
-                answers.add(faker.gameOfThrones().city());
-                answers.add(faker.gameOfThrones().city());
-                answers.add(faker.gameOfThrones().city());
-                entity.setAnswers(answers);
-                entity.setRightAnswer(answers.get(faker.random().nextInt(answers.size())));
-                questionRepository.save(entity);
-            }
+
+            questionEntities.add(questionEntity1);
+            questionRepository.saveAll(questionEntities);
+
+//            Faker faker = new Faker();
+//
+//            for (int i = 0; i < 10; i++) {
+//                QuestionEntity entity = new QuestionEntity();
+//                entity.setQuestion("What is " + faker.gameOfThrones().quote() + " mean?");
+//                List<String> answers = new ArrayList<>();
+//                answers.add(faker.gameOfThrones().city());
+//                answers.add(faker.gameOfThrones().city());
+//                answers.add(faker.gameOfThrones().city());
+//                answers.add(faker.gameOfThrones().city());
+//                entity.setAnswers(answers);
+//                entity.setRightAnswer(answers.get(faker.random().nextInt(answers.size())));
+//                questionRepository.save(entity);
+//            }
 
         };
     }

@@ -24,7 +24,6 @@ public class QuestionMapper {
             return QuestionEntity.builder()
                     .id(questionDto.getId())
                     .question(questionDto.getQuestion())
-                    .answers(questionDto.getAnswers())
                     .rightAnswer(questionDto.getRightAnswer())
                     .build();
     }
@@ -33,7 +32,6 @@ public class QuestionMapper {
             return QuestionDto.builder()
                     .id(questionEntity.getId())
                     .question(questionEntity.getQuestion())
-                    .answers(questionEntity.getAnswers())
                     .rightAnswer(questionEntity.getRightAnswer())
                     .build();
         }

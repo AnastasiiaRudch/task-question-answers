@@ -30,7 +30,7 @@ public class QuestionController {
         return ResponseEntity.ok(questionService.updateQuestion(questionDto));
     }
 
-    @DeleteMapping("/delete/supplier/{questionId}")
+    @DeleteMapping("/delete/question/{questionId}")
     public void deleteQuestion(@PathVariable("questionId") Integer questionId) {
          questionService.deleteQuestion(questionId);
     }

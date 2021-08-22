@@ -50,9 +50,6 @@ public class QuestionServiceImpl implements QuestionService{
         if(questionDto.getQuestion() != null){
             questionEntity.setQuestion(questionDto.getQuestion());
         }
-        if(questionDto.getAnswers() != null){
-            questionEntity.setAnswers(questionDto.getAnswers());
-        }
         if(questionDto.getRightAnswer() != null){
             questionEntity.setRightAnswer(questionDto.getRightAnswer());
         }

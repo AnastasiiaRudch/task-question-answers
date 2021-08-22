@@ -22,15 +22,11 @@ public class QuestionEntity {
     private int id;
 
     @NonNull
-    @Column(name = "question")
+    @Column(name = "question", unique = true)
     private String question;
-
-    @ElementCollection
-    @LazyCollection(LazyCollectionOption.FALSE)
-    private List<String> answers = new ArrayList<>();
 
     @NonNull
     @Column(name = "rightAnswer")
-    private String rightAnswer;
+    private Integer rightAnswer;
 
 }

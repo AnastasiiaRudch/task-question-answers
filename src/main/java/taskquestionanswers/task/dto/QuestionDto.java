@@ -13,7 +13,6 @@ public class QuestionDto {
 
     private int id;
     private String question;
-    private List<String> answers = new ArrayList<>();
-    private String rightAnswer;
+    private Integer rightAnswer;
 
 }
