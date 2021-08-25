@@ -1,6 +1,5 @@
 package taskquestionanswers.task;
 
-import com.github.javafaker.Faker;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,7 +9,7 @@ import taskquestionanswers.task.repository.QuestionRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+
 
 @SpringBootApplication
 public class TaskQuestionAnswersApplication {
@@ -35,21 +34,6 @@ public class TaskQuestionAnswersApplication {
 
             questionEntities.add(questionEntity1);
             questionRepository.saveAll(questionEntities);
-
-//            Faker faker = new Faker();
-//
-//            for (int i = 0; i < 10; i++) {
-//                QuestionEntity entity = new QuestionEntity();
-//                entity.setQuestion("What is " + faker.gameOfThrones().quote() + " mean?");
-//                List<String> answers = new ArrayList<>();
-//                answers.add(faker.gameOfThrones().city());
-//                answers.add(faker.gameOfThrones().city());
-//                answers.add(faker.gameOfThrones().city());
-//                answers.add(faker.gameOfThrones().city());
-//                entity.setAnswers(answers);
-//                entity.setRightAnswer(answers.get(faker.random().nextInt(answers.size())));
-//                questionRepository.save(entity);
-//            }
 
         };
     }
